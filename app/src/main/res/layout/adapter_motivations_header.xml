@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/header_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintDimensionRatio="H,16:9"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/banner_placeholder"
+        />
+
+    <LinearLayout
+        android:id="@+id/headerimage_description_underlay"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorBlackPartialTransparent"
+        app:layout_constraintBottom_toBottomOf="@+id/header_imageview"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="0dp">
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/headerimage_acknowledgement_textview"
+            android:freezesText="true"
+            android:maxLines="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimaryLight" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/issue_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryLight"
+        android:layout_marginTop="16dp"
+        android:freezesText="true"
+        app:layout_constraintTop_toBottomOf="@+id/header_imageview" />
+
+    <View
+        android:id="@+id/bottom_spacer"
+        android:background="@color/colorTransparent"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/issue_textview" />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

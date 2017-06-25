@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_login"
+    android:theme="@style/LavozTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app2:srcCompat="@drawable/login_background2"
+        android:id="@+id/loginBackgroundView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="1.0"
+        android:cropToPadding="false"
+        android:contentDescription="@null" />
+
+    <ImageView
+        android:layout_height="wrap_content"
+        app2:srcCompat="@drawable/logo_white"
+        android:id="@+id/logoView"
+        app:layout_constraintTop_toTopOf="@+id/loginBackgroundView"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/main_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/main_right_guideline"
+        android:contentDescription="@null" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_left_guideline"
+        app:layout_constraintGuide_percent="0.2"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="64dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_right_guideline"
+        app:layout_constraintGuide_percent="0.8"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="256dp" />
+
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/google_login_button"
+        android:layout_height="48dp"
+        app:buttonSize="wide"
+        app:layout_constraintBottom_toTopOf="@+id/fb_login_button"
+        app:layout_constraintRight_toRightOf="@+id/main_right_guideline"
+        app:layout_constraintLeft_toLeftOf="@+id/main_left_guideline"
+        android:layout_marginBottom="16dp"
+        android:layout_width="199dp" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fb_login_button"
+        android:layout_width="191dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginBackgroundView"
+        app:layout_constraintRight_toLeftOf="@+id/main_right_guideline"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintLeft_toLeftOf="@+id/main_left_guideline" />
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/still_loading_overlay"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorPrimary"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="2dp"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/still_loading_progressbar"
+            style="@android:style/Widget.ProgressBar.Large.Inverse"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

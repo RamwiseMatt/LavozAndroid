@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorBlackPartialTransparent">#aa000000</color>
+    <color name="colorPrimary">#181818</color>
+    <color name="colorPrimaryDark">#242424</color>
+    <color name="colorPrimaryLight">#FFFFFF</color>
+    <color name="colorAccent">#CF000F</color>
+    <color name="colorError">#EB4B57</color>
+    <color name="colorAlert">#EB4B57</color>
+    <color name="colorSuccess">#43D177</color>
+    <color name="colorMessage">#2C8FE6</color>
+    <color name="colorGreyDark">#313131</color>
+    <color name="colorGreyDarkTwo">#373737</color>
+    <color name="colorGreyMedium">#555555</color>
+    <color name="colorGreyMediumTwo">#676767</color>
+    <color name="colorGreyMediumLight">#BABABA</color>
+    <color name="colorGreyLight">#CCCCCC</color>
+    <color name="colorGreyLightTwo">#DDDDDD</color>
+    <color name="colorGreyUltraLight">#EEEEEE</color>
+    <color name="colorDarkBlueForLines">#004263</color>
+
+</resources>

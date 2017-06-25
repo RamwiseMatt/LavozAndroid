@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/motivation_container_layout"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/author_textview"
+            android:text="Mats ten Bohmer (stemde nee)"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/verified_icon_imageview"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:textColor="@color/colorGreyLightTwo"
+            android:layout_marginTop="16dp"
+            android:freezesText="true"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/verified_icon_imageview"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/icon_verified_round_blue"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/motivation_textview"
+            android:text="@string/error_not_posted_to_facebook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimaryLight"
+            android:layout_marginTop="4dp"
+            android:freezesText="true"
+            app:layout_constraintTop_toBottomOf="@+id/author_textview" />
+
+
+        <LinearLayout
+            android:id="@+id/meta_container_layout"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/motivation_textview"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp">
+
+            <LinearLayout
+                android:id="@+id/more_comments_container_layout"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:visibility="gone">
+
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/expand_collapse_icon_imageview"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginEnd="12dp"
+                    app:srcCompat="@drawable/icon_plus_white"
+                    />
+
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/responses_icon_imageview"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/icon_comments_676767"
+                    />
+
+                <TextView
+                    android:id="@+id/responses_count_textview"
+                    android:text="0"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorGreyMediumLight"
+                    android:freezesText="true" />
+
+            </LinearLayout>
+
+            <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/hearts_icon_imageview"
+                android:layout_gravity="center_vertical"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:adjustViewBounds="true"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/icon_heartfilled_676767"
+                />
+
+            <TextView
+                android:id="@+id/hearts_count_textview"
+                android:text="0"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="13sp"
+                android:textColor="@color/colorGreyMediumLight"
+                android:freezesText="true" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/heart_or_trash_button"
+            android:src="@drawable/icon_heart_cf000f"
+            android:background="@color/colorPrimary"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:padding="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:freezesText="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/motivation_textview"
+            app:layout_constraintRight_toLeftOf="@+id/reply_button" />
+
+        <ImageButton
+            android:id="@+id/reply_button"
+            android:src="@drawable/icon_reply_cf000f"
+            android:background="@color/colorPrimary"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:padding="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:freezesText="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/motivation_textview"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

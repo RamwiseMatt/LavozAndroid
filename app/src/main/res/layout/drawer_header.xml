@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_center_left_guideline"
+        app:layout_constraintGuide_percent="0.15"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="48dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_center_right_guideline"
+        app:layout_constraintGuide_percent="0.85"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="272dp" />
+
+    <ImageView
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo_white"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:id="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/main_center_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/main_center_right_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="24dp"
+        android:layout_width="0dp" />
+
+    <TextView
+        android:text=""
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_textview"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:freezesText="true"
+        android:maxLines="1"
+        android:ellipsize="marquee"
+        android:textColor="@color/colorPrimaryLight"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintLeft_toLeftOf="@+id/main_center_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/main_center_right_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:text="@string/cap_sign_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="22dp"
+        android:id="@+id/sign_out_button"
+        android:textColor="@color/colorGreyMediumLight"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:freezesText="true"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@+id/username_textview"
+        app:layout_constraintLeft_toLeftOf="@+id/main_center_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/main_center_right_guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintVertical_bias="0.0"
+        android:textAlignment="textStart" />
+
+
+</android.support.constraint.ConstraintLayout>

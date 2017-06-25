@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/menu_group_1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/home_item"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/cap_today" />
+    </group>
+    <group
+        android:id="@+id/menu_group_2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/adviceaid_item"
+            android:icon="@drawable/ic_create_black_24dp"
+            android:title="@string/cap_adviceaid" />
+    </group>
+    <group
+        android:id="@+id/menu_group_3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/motionlist_item"
+            android:icon="@drawable/ic_list_black_24dp"
+            android:title="@string/cap_motions" />
+    </group>
+    <group
+        android:id="@+id/menu_group_4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/overview_item"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="@string/cap_you" />
+    </group>
+</menu>
